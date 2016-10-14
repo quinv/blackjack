@@ -13,4 +13,4 @@ git push origin
 
 git status (moet groen zien na add)
 
-//switchen van branch: git checkout lesley
+//switchen van branch: git checkout branchName
