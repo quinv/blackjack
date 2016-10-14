@@ -15,3 +15,5 @@ git push origin
 git checkout 
 
 git status (moet groen zien na add)
+
+temp
