@@ -13,4 +13,8 @@ git push origin
 
 git status (moet groen zien na add)
 
+<<<<<<< HEAD
 //switchen van branch: git checkout branchName
+=======
+temp
+>>>>>>> cfe0b67881b7671888732c233df0bbf4357b87f9
