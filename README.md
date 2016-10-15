@@ -15,3 +15,6 @@ git push origin
 git checkout 
 
 git status (moet groen zien na add)
+
+//switchen van branch:
+git checkout branchName
