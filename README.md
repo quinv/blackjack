@@ -1,6 +1,3 @@
-# blackjack
-eenentwintigen
-
 //git clonen: git clone https://github.com/quinv/blackjack.git
 
 //git updaten: git add *
