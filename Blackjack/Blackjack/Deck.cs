@@ -48,7 +48,7 @@ namespace Blackjack
             Random r = new Random();
             int ran = r.Next(cards.Count - 1);
             Card c = cards[ran];
-            cards.Remove(cards[ran]);
+            cards.Remove(c);
             return c;
         }
     }
