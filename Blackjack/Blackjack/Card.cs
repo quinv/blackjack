@@ -39,5 +39,10 @@ namespace Blackjack
         {
             return type;
         }
+
+        public int getID()
+        {
+            return id;
+        }
     }
 }

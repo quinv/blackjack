@@ -50,9 +50,13 @@ namespace Blackjack
         {
             _pictureBox.Invalidate();
             Graphics g = _pictureBox.CreateGraphics();
+            Image[] playerCardImages = new Image[playerCards.Count];
             for (int i = 0; i < playerCards.Count; i++)
             {
-                
+                if(playerCards[i].getID() == 1)
+                {
+
+                }
             }
         }
     }
