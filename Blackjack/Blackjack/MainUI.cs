@@ -9,7 +9,7 @@ using System.Threading;
 
 namespace Blackjack
 {
-    class MainUI
+    public class MainUI
     {
         private int IMAGE_WIDTH = 132, IMAGE_HEIGHT = 185;
         private Bitmap[,] cards = new Bitmap[13, 4];
