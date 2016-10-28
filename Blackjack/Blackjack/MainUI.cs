@@ -11,10 +11,25 @@ namespace Blackjack
 {
     class MainUI
     {
+        private int IMAGE_WIDTH = 132, IMAGE_HEIGHT = 185;
         private Bitmap[,] cards = new Bitmap[13, 4];
         private Bitmap cardBack;
-        private int IMAGE_WIDTH = 132, IMAGE_HEIGHT = 185;
-        public MainUI()
+        PictureBox _pictureBox;
+        Main _main;
+
+
+        /// <summary>
+        /// loads the cards bitmaps from the card deck and stores them in an array
+        /// values:
+        /// 2 = 0
+        /// 3 = 1
+        /// ...
+        /// j = 9
+        /// q = 10
+        /// k = 11
+        /// a = 12
+        /// </summary>
+        public MainUI(PictureBox pictureBox, Main main)
         {
             Bitmap deck = Image.FromFile("playingCards/cardDeck.png") as Bitmap;
             cardBack = new Bitmap(IMAGE_WIDTH, IMAGE_HEIGHT);
@@ -31,9 +46,14 @@ namespace Blackjack
             }
         }
 
-        public void drawCards(List<Card> playerCards, List<Card> dealerCards)
+        public void drawCards(List<Card> playerCards, List<Card> dealerCards, bool turnDealerCards)
         {
-
+            _pictureBox.Invalidate();
+            Graphics g = _pictureBox.CreateGraphics();
+            for (int i = 0; i < playerCards.Count; i++)
+            {
+                
+            }
         }
     }
 }
