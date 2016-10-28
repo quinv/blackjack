@@ -4,7 +4,7 @@ namespace Blackjack
 {
     public class Card
     {
-        public enum CardType { Diamond, Spade, Heart, Clover };
+        public enum CardType { Diamond, Clover, Heart, Spade };
 
         private List<int> values;
         private CardType type;
