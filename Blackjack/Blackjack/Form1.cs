@@ -17,6 +17,7 @@ namespace Blackjack
             InitializeComponent();
             drawingPanel.Width = ClientSize.Width;
             drawingPanel.Height = ClientSize.Height;
+            Main main = new Main(drawingPanel);
         }
 
         private void DrawCard_Click(object sender, EventArgs e)
