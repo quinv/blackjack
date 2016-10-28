@@ -61,7 +61,7 @@
             this.stop.TabIndex = 2;
             this.stop.Text = "stop";
             this.stop.UseVisualStyleBackColor = true;
-            this.drawCard.Click += new System.EventHandler(this.Stop_Click);
+            this.stop.Click += new System.EventHandler(this.Stop_Click);
             // 
             // Form1
             // 
