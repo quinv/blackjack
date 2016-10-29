@@ -57,8 +57,8 @@ namespace Blackjack
         /// <summary>
         /// finds the images to use for the cards and calls method to draw them on the picturebox
         /// </summary>
-        /// <param name="playerCards">player hand</param>
-        /// <param name="dealerCards">dealer hand</param>
+        /// <param name="playerCards">player hand's card list</param>
+        /// <param name="dealerCards">dealer hand's card list</param>
         /// <param name="turnDealerCards">are the cards from the dealer visible</param>
         public void PlaceCards(List<Card> playerCards, List<Card> dealerCards, bool turnDealerCards)
         {
