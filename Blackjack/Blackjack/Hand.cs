@@ -9,11 +9,10 @@ namespace Blackjack
     public class Hand
     {
         private List<Card> cards = new List<Card>();
-        private Deck deck = new Deck();
 
-        public void GetCard()
+        public void GetCard(Main main)
         {
-            cards.Add(deck.drawCard());
+            cards.Add(main._deck.drawCard());
         }
     }
 }
