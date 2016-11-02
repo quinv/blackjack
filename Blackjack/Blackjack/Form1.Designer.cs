@@ -45,21 +45,21 @@
             // 
             // drawCard
             // 
-            this.drawCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.drawCard.Location = new System.Drawing.Point(1228, 658);
+            this.drawCard.Font = new System.Drawing.Font("Kozuka Mincho Pro H", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drawCard.Location = new System.Drawing.Point(1268, 620);
             this.drawCard.Name = "drawCard";
-            this.drawCard.Size = new System.Drawing.Size(316, 60);
+            this.drawCard.Size = new System.Drawing.Size(274, 94);
             this.drawCard.TabIndex = 1;
             this.drawCard.Text = "draw card";
             this.drawCard.UseVisualStyleBackColor = true;
-            this.drawCard.Click += new System.EventHandler(this.Stop_Click);
+            this.drawCard.Click += new System.EventHandler(this.DrawCard_Click);
             // 
             // stop
             // 
-            this.stop.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stop.Location = new System.Drawing.Point(1228, 742);
+            this.stop.Font = new System.Drawing.Font("Kozuka Mincho Pro H", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stop.Location = new System.Drawing.Point(1268, 746);
             this.stop.Name = "stop";
-            this.stop.Size = new System.Drawing.Size(316, 60);
+            this.stop.Size = new System.Drawing.Size(274, 94);
             this.stop.TabIndex = 2;
             this.stop.Text = "stop";
             this.stop.UseVisualStyleBackColor = true;
