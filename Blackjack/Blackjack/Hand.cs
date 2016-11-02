@@ -8,11 +8,16 @@ namespace Blackjack
 {
     public class Hand
     {
+        private static Deck _deck;
         private List<Card> cards = new List<Card>();
 
         public void GetCard(Main main)
         {
-            cards.Add(main._deck.drawCard());
+            if(_deck == null)
+            {
+                _deck = new Deck();
+            }
+            cards.Add(_deck.drawCard());
         }
     }
 }
