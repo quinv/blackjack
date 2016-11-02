@@ -12,12 +12,10 @@ namespace Blackjack
     public class Main
     {
         public MainUI _mainUI;
-        public Deck _deck;
 
         public Main(PictureBox pictureBox)
         {
-            _mainUI = new MainUI(pictureBox, this);
-            _deck = new Deck(this);
+            _mainUI = new MainUI(pictureBox);
         }
     }
 }
