@@ -12,12 +12,23 @@ namespace Blackjack
     public class Main
     {
         public MainUI _mainUI;
-        public Deck _deck;
 
         public Main(PictureBox pictureBox)
         {
-            _mainUI = new MainUI(pictureBox, this);
-            _deck = new Deck(this);
+            _mainUI = new MainUI(pictureBox);
+
+            //TODO
+            List<Card> playerDeck = new List<Card>();
+            List<Card> dealerDeck = new List<Card>();
+            Deck deck = new Deck();
+            Random r = new Random();
+            for (int i = 0; i < r.Next(10); i++)
+            {
+                playerDeck.Add(deck.drawCard());
+                dealerDeck.Add(deck.drawCard());
+            }
+            _mainUI.scoreUI.setCardValues(Logics.getTotalValues(playerDeck), Logics.getTotalValues(dealerDeck), true);
+            _mainUI.cardUI.PlaceCards(playerDeck, dealerDeck, false);
         }
     }
 }
