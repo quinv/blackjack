@@ -7,7 +7,7 @@ namespace Blackjack
         private List<Card> cards = new List<Card>();
         private List<Card.CardType> types;
 
-        public Deck(Main main)
+        public Deck()
         {
             types = new List<Card.CardType>();
             types.Add(Card.CardType.Clover);
