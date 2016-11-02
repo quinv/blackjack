@@ -16,17 +16,6 @@ namespace Blackjack
         public Main(PictureBox pictureBox)
         {
             _mainUI = new MainUI(pictureBox);
-
-            //TODO
-            List<Card> playerDeck = new List<Card>();
-            List<Card> dealerDeck = new List<Card>();
-            Deck deck = new Deck();
-            for (int i = 0; i < 9; i++)
-            {
-                playerDeck.Add(deck.drawCard());
-                dealerDeck.Add(deck.drawCard());
-            }
-            _mainUI.cardUI.PlaceCards(playerDeck, dealerDeck, false);
         }
     }
 }
