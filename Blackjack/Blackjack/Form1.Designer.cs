@@ -30,7 +30,7 @@
         {
             this.drawingPanel = new System.Windows.Forms.PictureBox();
             this.drawCard = new System.Windows.Forms.Button();
-            this.stop = new System.Windows.Forms.Button();
+            this.ChangeGameState = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.drawingPanel)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,25 +52,23 @@
             this.drawCard.TabIndex = 1;
             this.drawCard.Text = "draw card";
             this.drawCard.UseVisualStyleBackColor = true;
-            this.drawCard.Click += new System.EventHandler(this.DrawCard_Click);
             // 
             // stop
             // 
-            this.stop.Font = new System.Drawing.Font("Kozuka Mincho Pro H", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stop.Location = new System.Drawing.Point(1268, 746);
-            this.stop.Name = "stop";
-            this.stop.Size = new System.Drawing.Size(274, 94);
-            this.stop.TabIndex = 2;
-            this.stop.Text = "stop";
-            this.stop.UseVisualStyleBackColor = true;
-            this.stop.Click += new System.EventHandler(this.Stop_Click);
+            this.ChangeGameState.Font = new System.Drawing.Font("Kozuka Mincho Pro H", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChangeGameState.Location = new System.Drawing.Point(1268, 746);
+            this.ChangeGameState.Name = "stop";
+            this.ChangeGameState.Size = new System.Drawing.Size(274, 94);
+            this.ChangeGameState.TabIndex = 2;
+            this.ChangeGameState.Text = "stop";
+            this.ChangeGameState.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1600, 900);
-            this.Controls.Add(this.stop);
+            this.Controls.Add(this.ChangeGameState);
             this.Controls.Add(this.drawCard);
             this.Controls.Add(this.drawingPanel);
             this.Name = "Form1";
@@ -82,9 +80,9 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox drawingPanel;
-        private System.Windows.Forms.Button drawCard;
-        private System.Windows.Forms.Button stop;
+        public System.Windows.Forms.PictureBox drawingPanel;
+        public System.Windows.Forms.Button drawCard;
+        public System.Windows.Forms.Button ChangeGameState;
     }
 }
 

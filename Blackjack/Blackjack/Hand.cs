@@ -13,6 +13,12 @@ namespace Blackjack
 
         public Hand()
         {
+            Initialize();
+        }
+
+        public void Initialize()
+        {
+            cards.Clear();
             for (int i = 0; i < 2; i++)
             {
                 GetCard(_deck);
