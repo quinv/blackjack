@@ -39,7 +39,7 @@ namespace Blackjack
                 main.dealerHand.GetCard(Hand._Deck);
                 UpdateUI();
             }
-            //disable DrawCard & Stop buttons
+            DisableButtons();
             //check results
         }
 
@@ -47,6 +47,12 @@ namespace Blackjack
         {
             main._mainUI.cardUI.PlaceCards(main.playerHand.Cards, main.dealerHand.Cards, false);
             main._mainUI.scoreUI.setCardValues(Logics.getTotalValues(main.playerHand.Cards), Logics.getTotalValues(main.dealerHand.Cards), false, false);
+        }
+
+        private void DisableButtons()
+        {
+            stop.Enabled = false;
+            drawCard.Enabled = false;
         }
     }
 }
