@@ -13,8 +13,8 @@ namespace Blackjack
     {
         public MainUI _mainUI;
 
-        protected Hand playerHand = new Hand();
-        protected Hand dealerHand = new Hand();
+        public Hand playerHand = new Hand();
+        public Hand dealerHand = new Hand();
 
         public Main(PictureBox pictureBox)
         {

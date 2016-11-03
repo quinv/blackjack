@@ -13,7 +13,7 @@ namespace Blackjack
 
         public Hand()
         {
-            for(int i = 0; i < 2; i++)
+            for (int i = 0; i < 2; i++)
             {
                 GetCard(_deck);
             }
@@ -25,8 +25,28 @@ namespace Blackjack
             {
                 _deck = new Deck();
             }
-            cards.Add(_deck.drawCard());
-            Console.WriteLine("get card");
+            Cards.Add(_deck.drawCard());
+        }
+
+        public static Deck _Deck
+        {
+            get
+            {
+                return _deck;
+            }
+
+            set
+            {
+                _deck = value;
+            }
+        }
+
+        public List<Card> Cards
+        {
+            get
+            {
+                return cards;
+            }
         }
     }
 }
