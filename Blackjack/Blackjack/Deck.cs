@@ -6,8 +6,9 @@ namespace Blackjack
     {
         private List<Card> cards = new List<Card>();
         private List<Card.CardType> types;
+        Random r = new Random();
 
-        public Deck(Main main)
+        public Deck()
         {
             types = new List<Card.CardType>();
             types.Add(Card.CardType.Clover);
@@ -45,7 +46,6 @@ namespace Blackjack
             if (cards.Count == 0) {
                 createCards();
             }
-            Random r = new Random();
             int ran = r.Next(cards.Count - 1);
             Card c = cards[ran];
             cards.Remove(c);
