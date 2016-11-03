@@ -12,8 +12,9 @@ namespace Blackjack
     {
         public CardUI cardUI;
         public ScoreUI scoreUI;
-        public MainUI(PictureBox pictureBox)
+        public MainUI(Main main)
         {
+            PictureBox pictureBox = main._form.drawingPanel;
             cardUI = new CardUI(pictureBox);
             scoreUI = new ScoreUI(pictureBox);
             pictureBox.Paint += draw;
