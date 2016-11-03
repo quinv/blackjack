@@ -15,7 +15,6 @@ namespace Blackjack
         private int _playerScore = 0, _dealerScore = 0;
         private string _playerCardValues = "card values:\n0", _dealerCardValues = "card values:\n0";
         private Font gameFont = new Font("Kozuka Mincho Pro H", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        private TextFormatFlags textFormat = TextFormatFlags.HorizontalCenter;
         private PictureBox _pictureBox;
 
         public ScoreUI(PictureBox picturebox)
@@ -41,7 +40,7 @@ namespace Blackjack
         /// <param name="dealerCardValues">all possible values for the current dealer cards</param>
         /// <param name="valueVisible">are the dealer cards visible should only be used when someone has won</param>
         /// <param name="playerHasWon">should only be used when someone has won</param>
-        public void setCardValues(List<int> playerCardValues, List<int> dealerCardValues, bool valueVisible = false, bool playerHasWon = true)
+        public void setCardValues(List<int> playerCardValues, List<int> dealerCardValues, bool valueVisible = false)
         {
             _playerCardValues = "value" + (playerCardValues.Count > 1 ? "s:" : playerCardValues.Count > 0 ? ":" : ":\n0");
             foreach(int value in playerCardValues)

@@ -31,8 +31,23 @@ namespace Blackjack
                     }
                 }
             }
-
+            RemoveDuplicateValues(values);
             return values;
+        }
+
+        private static void RemoveDuplicateValues(List<int> values)
+        {
+            for (int i = values.Count - 1; i > 0; i--)
+            {
+                for (int j = 0; j < values.Count; j++)
+                {
+                    if (values[i] == values[j] && j != i)
+                    {
+                        values.RemoveAt(i);
+                        break;
+                    }
+                }
+            }
         }
     }
 }
