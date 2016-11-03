@@ -45,7 +45,7 @@ namespace Blackjack
                 {
                     cards[i, j] = new Bitmap(IMAGE_WIDTH, IMAGE_HEIGHT);
                     Graphics g = Graphics.FromImage(cards[i, j]);
-                    g.DrawImage(deck, 0, 0, new Rectangle(IMAGE_WIDTH * i, IMAGE_HEIGHT * j, IMAGE_WIDTH, IMAGE_HEIGHT), GraphicsUnit.Pixel);
+                    g.DrawImage(deck, 0, 0, new Rectangle(IMAGE_WIDTH * i, IMAGE_HEIGHT * j, IMAGE_WIDTH - 1, IMAGE_HEIGHT - 1), GraphicsUnit.Pixel);
                     cards[i, j] = RescaleCard(cards[i, j], IMAGE_WIDTH * SIZE_MULTIPLIER, IMAGE_HEIGHT * SIZE_MULTIPLIER);
                 }
             }
