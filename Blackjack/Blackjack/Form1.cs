@@ -13,6 +13,8 @@ namespace Blackjack
     public partial class Form1 : Form
     {
         Main main;
+        bool turnCards = false, playerWin = false;
+
         public Form1()
         {
             InitializeComponent();
@@ -24,10 +26,19 @@ namespace Blackjack
 
         private void DrawCard_Click(object sender, EventArgs e)
         {
-            main.playerHand.GetCard(Hand._Deck);
-            if (Logics.getTotalValues(main.dealerHand.Cards)[0] <= 21)
+            if (Logics.getTotalValues(main.playerHand.Cards).Min() <= 21)
             {
-                main.dealerHand.GetCard(Hand._Deck);
+                main.playerHand.GetCard(Hand._Deck);
+
+                if (Logics.getTotalValues(main.dealerHand.Cards).Min() <= 21)
+                {
+                    main.dealerHand.GetCard(Hand._Deck);
+                }
+            }
+            else
+            {
+                turnCards = true;
+                DisableButtons();
             }
             UpdateUI();
         }
@@ -37,16 +48,20 @@ namespace Blackjack
             if (Logics.getTotalValues(main.dealerHand.Cards)[0] <= 21)
             {
                 main.dealerHand.GetCard(Hand._Deck);
-                UpdateUI();
             }
+            if (Logics.getTotalValues(main.playerHand.Cards).Min() <= 21)  // higher results need to be checked as well
+            {
+                playerWin = true;
+            }
+            turnCards = true;
             DisableButtons();
-            //check results
+            UpdateUI();
         }
 
         private void UpdateUI()
         {
-            main._mainUI.cardUI.PlaceCards(main.playerHand.Cards, main.dealerHand.Cards, false);
-            main._mainUI.scoreUI.setCardValues(Logics.getTotalValues(main.playerHand.Cards), Logics.getTotalValues(main.dealerHand.Cards), false, false);
+            main._mainUI.cardUI.PlaceCards(main.playerHand.Cards, main.dealerHand.Cards, turnCards);
+            main._mainUI.scoreUI.setCardValues(Logics.getTotalValues(main.playerHand.Cards), Logics.getTotalValues(main.dealerHand.Cards), turnCards, playerWin);
         }
 
         private void DisableButtons()
