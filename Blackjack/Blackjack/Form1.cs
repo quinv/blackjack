@@ -39,6 +39,8 @@ namespace Blackjack
                 main.dealerHand.GetCard(Hand._Deck);
                 UpdateUI();
             }
+            //disable DrawCard & Stop buttons
+            //check results
         }
 
         private void UpdateUI()
