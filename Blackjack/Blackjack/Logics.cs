@@ -14,7 +14,7 @@ namespace Blackjack
             foreach (Card c in cards)
             {
                 List<int> cValues = c.getValues();
-                List<int> tempValues = values;
+                List<int> tempValues = new List<int>(values);
                 values.Clear();
                 foreach (int value in cValues)
                 {
