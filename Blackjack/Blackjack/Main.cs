@@ -13,6 +13,9 @@ namespace Blackjack
     {
         public MainUI _mainUI;
 
+        public Hand playerHand = new Hand();
+        public Hand dealerHand = new Hand();
+
         public Main(PictureBox pictureBox)
         {
             _mainUI = new MainUI(pictureBox);
