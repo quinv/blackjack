@@ -12,13 +12,14 @@ namespace Blackjack
     public class Main
     {
         public MainUI _mainUI;
+        public BlackjackController _blackjackController;
+        public Form1 _form;
 
-        public Hand playerHand = new Hand();
-        public Hand dealerHand = new Hand();
-
-        public Main(PictureBox pictureBox)
+        public Main(Form1 form)
         {
-            _mainUI = new MainUI(pictureBox);
+            _form = form;
+            _mainUI = new MainUI(this);
+            _blackjackController = new BlackjackController(this);
         }
     }
 }

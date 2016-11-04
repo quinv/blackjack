@@ -13,61 +13,18 @@ namespace Blackjack
     public partial class Form1 : Form
     {
         Main main;
-        bool turnCards = false, playerWin = false;
 
         public Form1()
         {
             InitializeComponent();
             drawingPanel.Width = ClientSize.Width;
             drawingPanel.Height = ClientSize.Height;
-            main = new Main(drawingPanel);
-            UpdateUI();
+            main = new Main(this);
+            //click events are initialized after the creation of the methods
+            this.drawCard.Click += new System.EventHandler(main._blackjackController.DrawCard);
+            this.ChangeGameState.Click += new System.EventHandler(main._blackjackController.ChangeGameState);
         }
 
-        private void DrawCard_Click(object sender, EventArgs e)
-        {
-            if (Logics.getTotalValues(main.playerHand.Cards).Min() <= 21)
-            {
-                main.playerHand.GetCard(Hand._Deck);
-
-                if (Logics.getTotalValues(main.dealerHand.Cards).Min() <= 21)
-                {
-                    main.dealerHand.GetCard(Hand._Deck);
-                }
-            }
-            else
-            {
-                turnCards = true;
-                DisableButtons();
-            }
-            UpdateUI();
-        }
-
-        private void Stop_Click(object sender, EventArgs e)
-        {
-            if (Logics.getTotalValues(main.dealerHand.Cards)[0] <= 21)
-            {
-                main.dealerHand.GetCard(Hand._Deck);
-            }
-            if (Logics.getTotalValues(main.playerHand.Cards).Min() <= 21)  // higher results need to be checked as well
-            {
-                playerWin = true;
-            }
-            turnCards = true;
-            DisableButtons();
-            UpdateUI();
-        }
-
-        private void UpdateUI()
-        {
-            main._mainUI.cardUI.PlaceCards(main.playerHand.Cards, main.dealerHand.Cards, turnCards);
-            main._mainUI.scoreUI.setCardValues(Logics.getTotalValues(main.playerHand.Cards), Logics.getTotalValues(main.dealerHand.Cards), turnCards, playerWin);
-        }
-
-        private void DisableButtons()
-        {
-            stop.Enabled = false;
-            drawCard.Enabled = false;
-        }
+        
     }
 }
